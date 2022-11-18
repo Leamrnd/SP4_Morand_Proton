@@ -9,20 +9,20 @@ package sp4_morand_proton;
  * @author proto
  */
 public class CelluleDeGrille {
-    private boolean Null;
+    private Jeton jetonCourant;
     
-    public CelluleDeGrille (boolean Null){
-        this.Null=Null;
+    public CelluleDeGrille (Jeton jetonCourant){
+        this.jetonCourant = null;
         
     }
     public boolean presenceJeton(){
         
         
-        if(Null=true){
-            return true;
+        if(jetonCourant == null){
+            return false;
         }
         else{ 
-            return false;
+            return true;
         }
     
     
