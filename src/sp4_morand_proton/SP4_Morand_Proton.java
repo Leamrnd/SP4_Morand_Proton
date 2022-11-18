@@ -4,6 +4,8 @@
  */
 package sp4_morand_proton;
 
+
+
 /**
  *
  * @author leamo
@@ -15,6 +17,21 @@ public class SP4_Morand_Proton {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        Jeton jet1 = new Jeton("violet");
+    
+        System.out.println(jet1);
+        
+        
+        
+       
+        
+        
+        
+        
+        
+        
     }
+    
     
 }
