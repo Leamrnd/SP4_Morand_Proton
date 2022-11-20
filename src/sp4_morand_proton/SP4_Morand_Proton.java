@@ -18,18 +18,22 @@ public class SP4_Morand_Proton {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        Jeton jet1 = new Jeton("violet");
+        Jeton jet1 = new Jeton("jaune");
+        Jeton jet2 = new Jeton("rouge");
     
+        
         System.out.println(jet1);
+
         
-        
-        
+        PlateauDeJeu plato = new PlateauDeJeu();
        
+        plato.ajouterJetonDansColonne(jet1, 2);
+        plato.ajouterJetonDansColonne(jet1, 2);
+        plato.ajouterJetonDansColonne(jet2, 1);
         
+        plato.afficherGrilleSurConsole();
         
-        
-        
-        
+        System.out.println(plato.grilleRemplie());
         
     }
     

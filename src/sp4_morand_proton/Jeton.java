@@ -13,11 +13,14 @@ public class Jeton {
     private String couleur;
 
     public Jeton(String couleur) {
+            this.couleur = couleur;
+        
         if (couleur != "jaune" && couleur != "rouge") {
             System.out.println("erreur: les couleurs possibles sont jaune ou rouge");
+            this.couleur = null;
         }
         
-        this.couleur = couleur;
+    
           
     }
     
@@ -31,10 +34,14 @@ public class Jeton {
         if (couleur == "jaune") {
             return "J";
         }
-        else {
+        if (couleur == "rouge") {
             return "R";
         }
-   
+        
+        else {
+            return ".";
+            
+        }
+    }
     
-}
 }

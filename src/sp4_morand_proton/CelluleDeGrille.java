@@ -39,6 +39,25 @@ public class CelluleDeGrille {
             return jetonCourant.lireCouleur(); 
         }
     }
+
+    @Override
+    public String toString() {
+        if (this.presenceJeton() == true) {
+            if (this.lireCouleurDuJeton() == "jaune") {
+                return " J ";
+            }
+            if (this.lireCouleurDuJeton() == "rouge") {
+                return " R ";
+            }
+        }
+        else {
+            return " . ";
+        }
+        return "";
+    }
+    
+  
+    
 }
     
    
