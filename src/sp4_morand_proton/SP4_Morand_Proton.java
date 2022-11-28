@@ -27,14 +27,27 @@ public class SP4_Morand_Proton {
         
         PlateauDeJeu plato = new PlateauDeJeu();
        
-        plato.ajouterJetonDansColonne(jet1, 2);
-        plato.ajouterJetonDansColonne(jet1, 2);
-        plato.ajouterJetonDansColonne(jet2, 1);
+        plato.ajouterJetonDansColonne(jet2, 2);
+        plato.ajouterJetonDansColonne(jet2, 3);
+        plato.ajouterJetonDansColonne(jet2, 3);
+        plato.ajouterJetonDansColonne(jet2, 4);
+        plato.ajouterJetonDansColonne(jet2, 4);
+        plato.ajouterJetonDansColonne(jet2, 3);
+        plato.ajouterJetonDansColonne(jet2, 5);
+        plato.ajouterJetonDansColonne(jet2, 4);
+        plato.ajouterJetonDansColonne(jet2, 2);
+        plato.ajouterJetonDansColonne(jet2, 2);
         
+        
+        plato.ajouterJetonDansColonne(jet2, 2);
+    
         plato.afficherGrilleSurConsole();
         
         System.out.println(plato.grilleRemplie());
         
+        //System.out.println(plato.ligneGagnantePourCouleur("jaune"));
+        
+        System.out.println(plato.diagonaleDescendanteGagnantePourCouleur("rouge"));
     }
     
     
