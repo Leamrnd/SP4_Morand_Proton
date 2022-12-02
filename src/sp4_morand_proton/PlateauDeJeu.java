@@ -117,10 +117,10 @@ public class PlateauDeJeu {
   
   public boolean colonneGagnantePourCouleur(String couleur) {
     boolean gagne= false;
-    for (int j = 0; j < 4; j++) {
-        for (int i = 0; i < 6; i++) {
+    for (int j = 3; j < 6; j++) {
+        for (int i = 0; i < 7; i++) {
             if (grille[j][i].lireCouleurDuJeton() == couleur) {
-                if (grille[j][i].lireCouleurDuJeton() == grille[j+1][i].lireCouleurDuJeton() &&  grille[j][i].lireCouleurDuJeton() == grille[j+2][i].lireCouleurDuJeton() && grille[j][i].lireCouleurDuJeton() == grille[j+3][i].lireCouleurDuJeton()) {
+                if (grille[j][i].lireCouleurDuJeton() == grille[j-1][i].lireCouleurDuJeton() &&  grille[j][i].lireCouleurDuJeton() == grille[j-2][i].lireCouleurDuJeton() && grille[j][i].lireCouleurDuJeton() == grille[j-3][i].lireCouleurDuJeton()) {
                   gagne =true;
                 }
             }
@@ -156,7 +156,7 @@ public class PlateauDeJeu {
     for (int j = 0; j < 3; j++) {
         for (int i = 0; i < 4; i++) {
             if (grille[j][i].lireCouleurDuJeton() == couleur) {
-                if (grille[j][i].lireCouleurDuJeton() == grille[j+1][i-1].lireCouleurDuJeton() &&  grille[j][i].lireCouleurDuJeton() == grille[j+2][i-2].lireCouleurDuJeton() && grille[j][i].lireCouleurDuJeton() == grille[j+3][i-3].lireCouleurDuJeton()) {
+                if (grille[j][i].lireCouleurDuJeton() == grille[j+1][i+1].lireCouleurDuJeton() &&  grille[j][i].lireCouleurDuJeton() == grille[j+2][i+2].lireCouleurDuJeton() && grille[j][i].lireCouleurDuJeton() == grille[j+3][i+3].lireCouleurDuJeton()) {
                   gagne = true;
                 }
             }
@@ -175,14 +175,26 @@ public class PlateauDeJeu {
   
   
   
-  /*public boolean etreGagnantePourCouleur(String a) {
-      
+  public boolean etreGagnantePourCouleur(String a) {
+      boolean victoire=false;
+        if (ligneGagnantePourCouleur(a)==true){
+            victoire=true; 
+        }
+        if (colonneGagnantePourCouleur(a)==true){
+            victoire=true;
+        }
+        if (diagonaleMontanteGagnantePourCouleur(a)==true){
+            victoire=true;
+        }  
+        if (diagonaleDescendanteGagnantePourCouleur(a)==true){
+            victoire=true;
+        }
+      return victoire;
   }
-     */ 
+     
   
+}
   
-  
-  }
-  
+ 
   
 

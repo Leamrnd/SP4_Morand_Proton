@@ -18,7 +18,7 @@ public class Joueur {
     public Joueur(String nom, String couleur) {
         this.nom = nom;
         this.couleur = couleur;
-        reserveJetons = null;
+        
     }
 
     public String getCouleur() {
@@ -43,5 +43,8 @@ public class Joueur {
         return reserveJetons.remove(0);
     }    
     
-    
+    @Override 
+    public String toString() {
+        return this.nom;
+    }
 }
