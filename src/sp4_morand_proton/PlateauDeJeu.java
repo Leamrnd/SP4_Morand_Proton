@@ -61,13 +61,37 @@ public class PlateauDeJeu {
    
    
    
-   /*public void viderGrille(Joueur j1 ;Joueur j2) {
-   
-   
-   }
-   
-   */
-   
+   public void viderGrille(Joueur j1 ,Joueur j2) {
+    for (int i = 0; i < 6; i++) {
+        for (int j = 0; j < 7; j++) {
+            Jeton jettemp = grille[i][j].recupererJeton();
+            if (grille[i][j].presenceJeton() == true) {
+                if (jettemp.lireCouleur() == "rouge") {
+                    if (j1.getCouleur() == "rouge") {
+                        j1.ajouterJeton(jettemp);
+                    }
+                    else{
+                        j2.ajouterJeton(jettemp);
+                    }
+                 }
+                if (jettemp.lireCouleur() == "jaune") {
+                    if (j1.getCouleur() == "jaune") {
+                        j1.ajouterJeton(jettemp);
+                    }
+                    else{
+                        j2.ajouterJeton(jettemp);
+                    }
+                }
+                if (grille[i][j].presenceTrouNoir() == true) {
+                    grille[i][j].supprimerTrouNoir();
+                }
+                if(grille[i][j].presenceDesintegrateur() == true) {
+                    grille[i][j].supprimerDesintegrateur();
+                }
+                   }
+        }
+    }
+  } 
    
    
    
