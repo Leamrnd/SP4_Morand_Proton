@@ -61,13 +61,13 @@ public class PlateauDeJeu {
    
    
    
-   /*public viderGrille(Joueur j1 ;Joueur j2) {
+   /*public void viderGrille(Joueur j1 ;Joueur j2) {
    
    
    }
    
+   */
    
-   */ 
    
    
    
@@ -193,6 +193,60 @@ public class PlateauDeJeu {
   }
      
   
+  /*public void tasserColonne() {
+      
+  }
+  
+  */
+  
+  public boolean presenceTrouNoir(int lign, int col) {
+      if (grille[lign][col].presenceTrouNoir() == true) {
+          return true;
+      }
+      else {
+          return false;
+      }
+  }
+  
+  public void placerTrouNoir(int lign, int col) {
+      grille[lign][col].placerTrouNoir();
+  }
+  
+  public void supprimerTrouNoir(int lign, int col) {
+      grille[lign][col].supprimerTrouNoir();
+  }
+  
+  public void placerDesintegrateur(int lign, int col) {
+      grille[lign][col].placerDesintegrateur();
+  }
+  
+    public void supprimerDesintegrateur(int lign, int col) {
+      grille[lign][col].supprimerDesintegrateur();
+  }
+  
+    public boolean presenceDesintegrateur(int lign, int col) {
+      if (grille[lign][col].presenceDesintegrateur() == true) {
+          return true;
+      }
+      else {
+          return false;
+      }
+  }
+  
+   public void supprimerJeton(int lign, int col) {
+      grille[lign][col].supprimerJeton();
+  }
+  
+   
+   public void recupererJeton(int lign, int col) {
+      grille[lign][col].recupererJeton();
+  } 
+   
+   
+   
+   
+   
+   
 }
   
  
