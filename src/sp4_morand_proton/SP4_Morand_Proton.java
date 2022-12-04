@@ -18,7 +18,7 @@ public class SP4_Morand_Proton {
     public static void main(String[] args) {
         // TODO code application logic here
     
-    /*
+    
         Jeton jet1 = new Jeton("jaune");
         Jeton jet2 = new Jeton("rouge");
     Joueur Johnny = new Joueur("Johnny","jaune");
@@ -46,7 +46,7 @@ public class SP4_Morand_Proton {
         
         System.out.println(plato.grilleRemplie());
         
-        /*System.out.println(plato.ligneGagnantePourCouleur("rouge"));
+        System.out.println(plato.ligneGagnantePourCouleur("rouge"));
         
         System.out.println(plato.diagonaleDescendanteGagnantePourCouleur("rouge"));
         System.out.println(plato.colonneGagnantePourCouleur("rouge")); 
@@ -58,14 +58,19 @@ public class SP4_Morand_Proton {
         
         
         System.out.println(Johnny.jouerJeton());
-        */
-        Joueur Joueur1 = new Joueur("Francois", "rouge");
-        Joueur Joueur2 = new Joueur("Marine", "jaune");
+        
+        plato.viderGrille(Johnny, Johnny);
+        
+        plato.afficherGrilleSurConsole();
+        
+        /*
+        Joueur Joueur1 = new Joueur("Léa", "rouge");
+        Joueur Joueur2 = new Joueur("Papa", "jaune");
         Partie p1 = new Partie(Joueur1, Joueur2);
         p1.initialiserPartie();
         p1.lancerPartie();
         
-        
+        */
         
         
     }
