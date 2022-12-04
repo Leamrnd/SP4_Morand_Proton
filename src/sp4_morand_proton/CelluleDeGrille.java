@@ -10,6 +10,8 @@ package sp4_morand_proton;
  */
 public class CelluleDeGrille {
     private Jeton jetonCourant;
+    private boolean avoirTrouNoir;
+    private boolean avoirDesintegrateur;
     
     public CelluleDeGrille (Jeton jetonCourant){
         this.jetonCourant = null;
@@ -49,6 +51,12 @@ public class CelluleDeGrille {
             if (this.lireCouleurDuJeton() == "rouge") {
                 return " R ";
             }
+            if (this.presenceTrouNoir() == true) {
+                return " @ ";
+            }
+            if (this.presenceDesintegrateur() == true) {
+                return " D ";
+            }
         }
         else {
             return " . ";
@@ -56,7 +64,58 @@ public class CelluleDeGrille {
         return "";
     }
     
+    public void placerTrouNoir() {
+        avoirTrouNoir = true;
+    }
+    
+    public void supprimerTrouNoir() {
+      avoirTrouNoir = false;
+  }
+
+    public boolean presenceTrouNoir() {
+        return avoirTrouNoir;
+    }
+    
+    
+    public Jeton recupererJeton() {
+        Jeton jettemp;
+        if (jetonCourant != null) {
+            jettemp = jetonCourant;
+            jetonCourant = null;
+            return jettemp;
+        }
+        else {
+            return null;
+        }
+    }
   
+    public void supprimerJeton() {
+      jetonCourant = null;
+  }
+    
+    
+    public void placerDesintegrateur() {
+        avoirDesintegrateur = true;
+    }
+    
+    
+    public void supprimerDesintegrateur() {
+        avoirDesintegrateur = false;
+    }
+    
+    public boolean presenceDesintegrateur() {
+        return avoirDesintegrateur;
+    }
+    
+    
+    public void activerTrouNoir() {
+        this.supprimerJeton();
+        this.supprimerTrouNoir();
+    }
+    
+    
+    
+    
     
 }
     
