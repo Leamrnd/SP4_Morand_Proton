@@ -114,6 +114,7 @@ public class Partie {
         joueurCourant = listeJoueurs[0];
     Scanner sc = new Scanner(System.in); //initialisation du scanner qui recupere les infos de la console 
     plateau.afficherGrilleSurConsole();
+    this.placerTrousNoirsEtDesintegrateurs();
     do {
        System.out.println("\nA ton tour : " + joueurCourant + "\n Choisis stp la colonne ou jouer" );
        int rep = sc.nextInt();
