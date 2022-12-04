@@ -57,6 +57,52 @@ public class Partie {
     }
     
     
+    public void placerTrousNoirsEtDesintegrateurs() {
+        int li = (int)(Math.random())*6;
+        int col = (int)(Math.random())*7;
+        int compt_tn_d = 0;
+        int compt_tn = 0;
+        int compt_d = 0;
+        
+        do {
+            if (plateau.presenceTrouNoir(li, col) == false && plateau.presenceDesintegrateur(li, col) == false) {
+                plateau.placerTrouNoir(li, col);
+                plateau.placerDesintegrateur(li, col);
+                li = (int)(Math.random())*6;
+                col = (int)(Math.random())*7;
+                compt_tn_d += 1;
+            }
+            } while(compt_tn_d < 3);
+        
+        
+        do {
+        li = (int)(Math.random())*6;
+        col = (int)(Math.random())*7;
+        if (plateau.presenceTrouNoir(li, col) == false && plateau.presenceDesintegrateur(li, col) == false) {
+            plateau.placerDesintegrateur(li, col);
+            compt_d += 1;
+        }
+        } while(compt_d < 2);
+    
+        
+        do {
+            li = (int)(Math.random())*6;
+            col = (int)(Math.random())*7;
+            if (plateau.presenceTrouNoir(li, col) == false && plateau.presenceDesintegrateur(li, col) == false) {
+                plateau.placerTrouNoir(li, col);
+                compt_tn += 1;
+            }
+
+            } while(compt_tn < 2);   
+    
+    }
+    
+    
+    
+    
+    
+    
+    
     public void initialiserPartie() {
        this.attribuerCouleurAuxJoueurs();
         
