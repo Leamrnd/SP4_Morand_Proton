@@ -9,6 +9,8 @@ import java.util.ArrayList;
  *
  * @author proto
  */
+
+//information sur les joueurs
 public class Joueur {
 
     private String nom;

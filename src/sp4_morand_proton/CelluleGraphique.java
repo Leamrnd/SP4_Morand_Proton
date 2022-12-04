@@ -18,4 +18,32 @@ public class CelluleGraphique extends jButton {
         CelluleAssociee= uneCellule;
     }
     
+    @Override
+    public void paintComponent(Graphics G){
+        super.paintcomponent(G);
+        if (CelluleAssociee.presenceTrouNoir()=true){
+            setIcon();
+        }
+        else if (CelluleAssociee.presenceTrouNoir(=true)){
+       
+            setIcon();   
+        
+        }
+        else {
+            String couleur=CelluleAssociee.lireCouleur();
+            switch (couleur){
+                case "vide":
+                    break;
+                case"Rouge":
+                    setIcon();
+                    break;
+                case"Jaune":
+                    setIcon();
+                    break;
+                    
+            }
+        }
+        setIcon();
+        
+    }*/
 }

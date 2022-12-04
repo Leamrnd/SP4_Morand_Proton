@@ -19,6 +19,7 @@ public class Partie {
      plateau = new PlateauDeJeu();
     }
     
+    //affectation des couleurs des joueurs
      public void attribuerCouleurAuxJoueurs() {
          int a = (int)(Math.random())*2;
          if (a == 0) {
@@ -56,7 +57,7 @@ public class Partie {
        }
     }
     
-    
+    //ajouts des trous noirs et désintégrateurs
     public void placerTrousNoirsEtDesintegrateurs() {
         int li = (int)(Math.random())*6;
         int col = (int)(Math.random())*7;
@@ -105,9 +106,11 @@ public class Partie {
     
     public void initialiserPartie() {
        this.attribuerCouleurAuxJoueurs();
-        
+       this.creerEtAffecterJeton(listeJoueurs[0]);
+       this.creerEtAffecterJeton(listeJoueurs[1]);
+       this.placerTrousNoirsEtDesintegrateurs();
     }
-    
+    //lancement de la partie selon différents cas
     public void lancerPartie() {
         this.creerEtAffecterJeton(listeJoueurs[0]);
         this.creerEtAffecterJeton(listeJoueurs[1]);

@@ -12,7 +12,8 @@ package sp4_morand_proton;
 public class Jeton {
     private String couleur;
 
-    public Jeton(String couleur) {
+    //choix du jeton par les joueurs
+    public Jeton(String couleur) {      
             this.couleur = couleur;
         
         if (couleur != "jaune" && couleur != "rouge") {
@@ -24,7 +25,7 @@ public class Jeton {
           
     }
     
-    
+  //lecture du jeton  
     public String lireCouleur() {
         return couleur;
     }
